@@ -20,6 +20,10 @@ def init_db():
 
 init_db()
 
+@app.route('/')
+def index():
+    return 'API работает. Используй POST /register для регистрации водителя.'
+    
 # Endpoint регистрации водителя
 @app.route('/register', methods=['POST'])
 def register_driver():
